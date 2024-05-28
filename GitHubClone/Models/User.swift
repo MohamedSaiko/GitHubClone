@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct User: Decodable {
+    let id: Int
+    let login: String
+    let avatarUrl: URL
+    let publicRepos: Int
+    let followers: Int
+    let url: String
+}
