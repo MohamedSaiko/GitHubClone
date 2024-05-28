@@ -30,6 +30,10 @@
 		DBCBA2902C05D05300E31EEB /* RepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA28F2C05D05300E31EEB /* RepositoriesViewModel.swift */; };
 		DBCBA2922C05D0FB00E31EEB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2912C05D0FB00E31EEB /* Repository.swift */; };
 		DBCBA2952C05D54E00E31EEB /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2942C05D54E00E31EEB /* RepositoryCell.swift */; };
+		DBCBA2972C060C3200E31EEB /* ForksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2962C060C3200E31EEB /* ForksViewController.swift */; };
+		DBCBA29A2C060EF700E31EEB /* ForkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2992C060EF700E31EEB /* ForkCell.swift */; };
+		DBCBA29C2C060FE300E31EEB /* ForksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA29B2C060FE300E31EEB /* ForksViewModel.swift */; };
+		DBCBA29E2C06102200E31EEB /* Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA29D2C06102200E31EEB /* Fork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		DBCBA28F2C05D05300E31EEB /* RepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModel.swift; sourceTree = "<group>"; };
 		DBCBA2912C05D0FB00E31EEB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		DBCBA2942C05D54E00E31EEB /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		DBCBA2962C060C3200E31EEB /* ForksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksViewController.swift; sourceTree = "<group>"; };
+		DBCBA2992C060EF700E31EEB /* ForkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCell.swift; sourceTree = "<group>"; };
+		DBCBA29B2C060FE300E31EEB /* ForksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksViewModel.swift; sourceTree = "<group>"; };
+		DBCBA29D2C06102200E31EEB /* Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +180,9 @@
 		DBCBA26E2C04542100E31EEB /* UsersView */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBA26F2C04544500E31EEB /* UsersViewModel.swift */,
-				DBCBA23F2C04519200E31EEB /* UsersViewController.swift */,
 				DBCBA26D2C0453E900E31EEB /* UsersCell */,
+				DBCBA23F2C04519200E31EEB /* UsersViewController.swift */,
+				DBCBA26F2C04544500E31EEB /* UsersViewModel.swift */,
 			);
 			path = UsersView;
 			sourceTree = "<group>";
@@ -182,9 +190,9 @@
 		DBCBA2712C04717F00E31EEB /* RepositoriesView */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA2932C05D51600E31EEB /* RepositoriesCell */,
 				DBCBA28B2C05C93F00E31EEB /* RepositoriesViewController.swift */,
 				DBCBA28F2C05D05300E31EEB /* RepositoriesViewModel.swift */,
-				DBCBA2932C05D51600E31EEB /* RepositoriesCell */,
 			);
 			path = RepositoriesView;
 			sourceTree = "<group>";
@@ -192,6 +200,9 @@
 		DBCBA2722C04719600E31EEB /* ForksView */ = {
 			isa = PBXGroup;
 			children = (
+				DBCBA2982C060EC300E31EEB /* ForksCell */,
+				DBCBA2962C060C3200E31EEB /* ForksViewController.swift */,
+				DBCBA29B2C060FE300E31EEB /* ForksViewModel.swift */,
 			);
 			path = ForksView;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				DBCBA2772C04741E00E31EEB /* UserData.swift */,
 				DBCBA2792C04750B00E31EEB /* User.swift */,
 				DBCBA2912C05D0FB00E31EEB /* Repository.swift */,
+				DBCBA29D2C06102200E31EEB /* Fork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +243,14 @@
 				DBCBA2942C05D54E00E31EEB /* RepositoryCell.swift */,
 			);
 			path = RepositoriesCell;
+			sourceTree = "<group>";
+		};
+		DBCBA2982C060EC300E31EEB /* ForksCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA2992C060EF700E31EEB /* ForkCell.swift */,
+			);
+			path = ForksCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,14 +384,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBCBA29A2C060EF700E31EEB /* ForkCell.swift in Sources */,
 				DBCBA27D2C04762F00E31EEB /* NetworkManager.swift in Sources */,
 				DBCBA26C2C0453D100E31EEB /* UserCell.swift in Sources */,
 				DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */,
+				DBCBA29C2C060FE300E31EEB /* ForksViewModel.swift in Sources */,
 				DBCBA28E2C05CE4000E31EEB /* StoryboardIdentifier.swift in Sources */,
+				DBCBA2972C060C3200E31EEB /* ForksViewController.swift in Sources */,
 				DBCBA2782C04741E00E31EEB /* UserData.swift in Sources */,
 				DBCBA23C2C04519200E31EEB /* AppDelegate.swift in Sources */,
 				DBCBA28A2C05992200E31EEB /* UserCellViewModel.swift in Sources */,
 				DBCBA28C2C05C93F00E31EEB /* RepositoriesViewController.swift in Sources */,
+				DBCBA29E2C06102200E31EEB /* Fork.swift in Sources */,
 				DBCBA2952C05D54E00E31EEB /* RepositoryCell.swift in Sources */,
 				DBCBA27A2C04750B00E31EEB /* User.swift in Sources */,
 				DBCBA27F2C0488BB00E31EEB /* AppURLs.swift in Sources */,

@@ -64,9 +64,13 @@ extension UsersViewController: UITableViewDataSource {
 
 extension UsersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let repositoriesViewController = storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.shared.repositoriesViewControllerID) as! RepositoriesViewController
-        repositoriesViewController.username = usersViewModel.users[indexPath.row
-        ].login
+        let repositoriesViewController = storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.shared.repositoriesViewControllerID) as? RepositoriesViewController
+        
+        guard let repositoriesViewController = repositoriesViewController else {
+            return
+        }
+        
+        repositoriesViewController.username = usersViewModel.users[indexPath.row].login
         navigationController?.pushViewController(repositoriesViewController, animated: true)
     }
 }

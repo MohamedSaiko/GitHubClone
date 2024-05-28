@@ -9,8 +9,10 @@ import Foundation
 
 final class CellsIdentifier {
     static let shared = CellsIdentifier()
+    
     let userCellID = "UserCell"
     let repositoryCellID = "RepositoryCell"
+    let forkCellID = "ForkCell"
     
     private init() {}
 }
