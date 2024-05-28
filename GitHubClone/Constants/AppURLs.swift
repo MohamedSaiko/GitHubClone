@@ -16,4 +16,8 @@ final class AppURLs {
     func paginate(perPage: Int) -> String {
         "?per_page=\(perPage)"
     }
+    
+    func formatURL(withUsername username: String) -> String {
+        "/\(username)/repos"
+    }
 }
