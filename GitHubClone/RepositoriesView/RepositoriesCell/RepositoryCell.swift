@@ -8,9 +8,9 @@
 import UIKit
 
 class RepositoryCell: UITableViewCell {
-    @IBOutlet weak var repositoryNameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var licenseLabel: UILabel!
+    @IBOutlet private weak var repositoryNameLabel: UILabel!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var licenseLabel: UILabel!
     
     func configure(fromRepository repository: Repository) {
         repositoryNameLabel.text = repository.name
