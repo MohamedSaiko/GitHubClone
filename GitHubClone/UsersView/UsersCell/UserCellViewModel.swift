@@ -9,21 +9,38 @@ import Foundation
 
 final class UserCellViewModel {
     private let imageDownloader: ImageDownloader
+    private let imageCache = NSCache<NSURL, NSData>()
     
     init(imageDownloader: ImageDownloader) {
         self.imageDownloader = imageDownloader
     }
     
     func downloadImage(fromURL url: URL, completion: @escaping (Data) -> Void) {
-        imageDownloader.download(fromURL: url) { result in
+        imageDownloader.download(fromURL: url) { [weak self] result in
+            guard let self else {
+                return
+            }
+            
             switch result {
             case .success(let image):
-                DispatchQueue.main.async {
-                    completion(image)
+                self.imageCache.setObject(image as NSData, forKey: url as NSURL)
+                
+                if let cachedImage = self.imageCache.object(forKey: url as NSURL) {
+                    DispatchQueue.main.async {
+                        completion(cachedImage as Data)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        completion(image)
+                    }
                 }
                 
             case .failure(let error):
-                print(error)
+                if let cachedImage = self.imageCache.object(forKey: url as NSURL) {
+                    DispatchQueue.main.async {
+                        completion(cachedImage as Data)
+                    }
+                }
             }
         }
     }
