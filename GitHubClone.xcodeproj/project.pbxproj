@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		DBCBA23C2C04519200E31EEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23B2C04519200E31EEB /* AppDelegate.swift */; };
 		DBCBA23E2C04519200E31EEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */; };
-		DBCBA2402C04519200E31EEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23F2C04519200E31EEB /* ViewController.swift */; };
+		DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23F2C04519200E31EEB /* UsersViewController.swift */; };
 		DBCBA2432C04519200E31EEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2422C04519200E31EEB /* Base */; };
 		DBCBA2452C04519200E31EEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2442C04519200E31EEB /* Assets.xcassets */; };
 		DBCBA2482C04519200E31EEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2472C04519200E31EEB /* Base */; };
 		DBCBA2532C04519200E31EEB /* GitHubCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2522C04519200E31EEB /* GitHubCloneTests.swift */; };
 		DBCBA25D2C04519300E31EEB /* GitHubCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA25C2C04519300E31EEB /* GitHubCloneUITests.swift */; };
 		DBCBA25F2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA25E2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift */; };
+		DBCBA26C2C0453D100E31EEB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA26B2C0453D100E31EEB /* UserCell.swift */; };
+		DBCBA2702C04544500E31EEB /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA26F2C04544500E31EEB /* UsersViewModel.swift */; };
+		DBCBA2752C04729600E31EEB /* CellsIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2742C04729600E31EEB /* CellsIdentifier.swift */; };
+		DBCBA2782C04741E00E31EEB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2772C04741E00E31EEB /* UserData.swift */; };
+		DBCBA27A2C04750B00E31EEB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2792C04750B00E31EEB /* User.swift */; };
+		DBCBA27D2C04762F00E31EEB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA27C2C04762F00E31EEB /* NetworkManager.swift */; };
+		DBCBA27F2C0488BB00E31EEB /* AppURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA27E2C0488BB00E31EEB /* AppURLs.swift */; };
+		DBCBA2882C05949100E31EEB /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2872C05949100E31EEB /* ImageDownloader.swift */; };
+		DBCBA28A2C05992200E31EEB /* UserCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2892C05992200E31EEB /* UserCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +48,7 @@
 		DBCBA2382C04519200E31EEB /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA23B2C04519200E31EEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBCBA23F2C04519200E31EEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DBCBA23F2C04519200E31EEB /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		DBCBA2422C04519200E31EEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBCBA2442C04519200E31EEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBCBA2472C04519200E31EEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +58,15 @@
 		DBCBA2582C04519300E31EEB /* GitHubCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA25C2C04519300E31EEB /* GitHubCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneUITests.swift; sourceTree = "<group>"; };
 		DBCBA25E2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBCBA26B2C0453D100E31EEB /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		DBCBA26F2C04544500E31EEB /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		DBCBA2742C04729600E31EEB /* CellsIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsIdentifier.swift; sourceTree = "<group>"; };
+		DBCBA2772C04741E00E31EEB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		DBCBA2792C04750B00E31EEB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DBCBA27C2C04762F00E31EEB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DBCBA27E2C0488BB00E31EEB /* AppURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLs.swift; sourceTree = "<group>"; };
+		DBCBA2872C05949100E31EEB /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		DBCBA2892C05992200E31EEB /* UserCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +119,12 @@
 			children = (
 				DBCBA23B2C04519200E31EEB /* AppDelegate.swift */,
 				DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */,
-				DBCBA23F2C04519200E31EEB /* ViewController.swift */,
+				DBCBA2732C04726900E31EEB /* Constants */,
+				DBCBA2762C0473BE00E31EEB /* Models */,
+				DBCBA27B2C04760800E31EEB /* Networking */,
+				DBCBA2722C04719600E31EEB /* ForksView */,
+				DBCBA2712C04717F00E31EEB /* RepositoriesView */,
+				DBCBA26E2C04542100E31EEB /* UsersView */,
 				DBCBA2412C04519200E31EEB /* Main.storyboard */,
 				DBCBA2442C04519200E31EEB /* Assets.xcassets */,
 				DBCBA2462C04519200E31EEB /* LaunchScreen.storyboard */,
@@ -125,6 +148,67 @@
 				DBCBA25E2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift */,
 			);
 			path = GitHubCloneUITests;
+			sourceTree = "<group>";
+		};
+		DBCBA26D2C0453E900E31EEB /* UsersCell */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA2892C05992200E31EEB /* UserCellViewModel.swift */,
+				DBCBA26B2C0453D100E31EEB /* UserCell.swift */,
+			);
+			path = UsersCell;
+			sourceTree = "<group>";
+		};
+		DBCBA26E2C04542100E31EEB /* UsersView */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA26F2C04544500E31EEB /* UsersViewModel.swift */,
+				DBCBA23F2C04519200E31EEB /* UsersViewController.swift */,
+				DBCBA26D2C0453E900E31EEB /* UsersCell */,
+			);
+			path = UsersView;
+			sourceTree = "<group>";
+		};
+		DBCBA2712C04717F00E31EEB /* RepositoriesView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RepositoriesView;
+			path = Users;
+			sourceTree = "<group>";
+		};
+		DBCBA2722C04719600E31EEB /* ForksView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForksView;
+			sourceTree = "<group>";
+		};
+		DBCBA2732C04726900E31EEB /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA2742C04729600E31EEB /* CellsIdentifier.swift */,
+				DBCBA27E2C0488BB00E31EEB /* AppURLs.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DBCBA2762C0473BE00E31EEB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA2772C04741E00E31EEB /* UserData.swift */,
+				DBCBA2792C04750B00E31EEB /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBCBA27B2C04760800E31EEB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DBCBA27C2C04762F00E31EEB /* NetworkManager.swift */,
+				DBCBA2872C05949100E31EEB /* ImageDownloader.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +342,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCBA2402C04519200E31EEB /* ViewController.swift in Sources */,
+				DBCBA27D2C04762F00E31EEB /* NetworkManager.swift in Sources */,
+				DBCBA26C2C0453D100E31EEB /* UserCell.swift in Sources */,
+				DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */,
+				DBCBA2782C04741E00E31EEB /* UserData.swift in Sources */,
 				DBCBA23C2C04519200E31EEB /* AppDelegate.swift in Sources */,
+				DBCBA28A2C05992200E31EEB /* UserCellViewModel.swift in Sources */,
+				DBCBA27A2C04750B00E31EEB /* User.swift in Sources */,
+				DBCBA27F2C0488BB00E31EEB /* AppURLs.swift in Sources */,
 				DBCBA23E2C04519200E31EEB /* SceneDelegate.swift in Sources */,
+				DBCBA2752C04729600E31EEB /* CellsIdentifier.swift in Sources */,
+				DBCBA2882C05949100E31EEB /* ImageDownloader.swift in Sources */,
+				DBCBA2702C04544500E31EEB /* UsersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
