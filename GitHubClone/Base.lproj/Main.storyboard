@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hIf-06-dOm">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -8,16 +8,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="p9a-mZ-whn">
+            <objects>
+                <navigationController id="hIf-06-dOm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IAe-Jw-0b0">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PJM-bB-OsD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zg9-C0-xY3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-995" y="-27"/>
+        </scene>
         <!--Users View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UsersViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersViewController" id="BYZ-38-t0r" customClass="UsersViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ck-AX-hv5">
-                                <rect key="frame" x="15" y="74" width="363" height="42"/>
+                                <rect key="frame" x="15" y="118" width="363" height="42"/>
                                 <attributedString key="attributedText">
                                     <fragment content="GitHub Users">
                                         <attributes>
@@ -28,18 +44,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-V8-VPB">
-                                <rect key="frame" x="0.0" y="121" width="393" height="697"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-V8-VPB">
+                                <rect key="frame" x="0.0" y="165" width="393" height="653"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="126" id="2eO-mj-xQy" customClass="UserCell" customModule="GitHubClone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="126"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="126" id="2eO-mj-xQy" customClass="UserCell" customModule="GitHubClone" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2eO-mj-xQy" id="Oh7-hT-NTd">
-                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="126"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XD9-C1-ymh">
-                                                    <rect key="frame" x="15" y="15" width="332.66666666666669" height="96"/>
+                                                    <rect key="frame" x="15" y="15" width="292.66666666666669" height="96"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wMN-yY-Vuf">
                                                             <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
@@ -49,10 +66,10 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZtD-W0-6Bh">
-                                                            <rect key="frame" x="110.99999999999999" y="0.0" width="221.66666666666663" height="96"/>
+                                                            <rect key="frame" x="110.99999999999999" y="0.0" width="181.66666666666663" height="96"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5P-JX-pdM">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="221.66666666666666" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="32"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="UserName">
                                                                             <attributes>
@@ -65,7 +82,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il3-74-JWt">
-                                                                    <rect key="frame" x="0.0" y="32" width="221.66666666666666" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="32" width="181.66666666666666" height="32"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Repositories">
                                                                             <attributes>
@@ -83,7 +100,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voQ-NW-m5c">
-                                                                    <rect key="frame" x="0.0" y="64" width="221.66666666666666" height="32"/>
+                                                                    <rect key="frame" x="0.0" y="64" width="181.66666666666666" height="32"/>
                                                                     <attributedString key="attributedText">
                                                                         <fragment content="Followers">
                                                                             <attributes>
@@ -138,13 +155,110 @@
                             <constraint firstItem="5Ck-AX-hv5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="f4c-9T-xQ9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BH2-X4-7GL"/>
                     <connections>
                         <outlet property="usersTableView" destination="hLH-V8-VPB" id="9Du-eg-4Bh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-254.19847328244273" y="-27.464788732394368"/>
+        </scene>
+        <!--Repositories View Controller-->
+        <scene sceneID="joT-4Z-8AD">
+            <objects>
+                <viewController storyboardIdentifier="RepositoriesViewController" id="8pU-Tt-z2N" customClass="RepositoriesViewController" customModule="GitHubClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2XU-oV-e0P">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WCc-3S-ZN8">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RepositoryCell" rowHeight="300" id="whC-MJ-Rty" customClass="RepositoryCell" customModule="GitHubClone" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="whC-MJ-Rty" id="9gg-SY-PIM">
+                                            <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SfU-L3-VcK">
+                                                    <rect key="frame" x="15" y="15" width="292.66666666666669" height="270"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Ty-82K">
+                                                            <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="30"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="UserName">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="25" name="HelveticaNeue-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-Jl-e01" userLabel="Description">
+                                                            <rect key="frame" x="0.0" y="126.66666666666664" width="292.66666666666669" height="23.333333333333329"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Name">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYB-8g-lfU" userLabel="License">
+                                                            <rect key="frame" x="0.0" y="246.66666666666671" width="292.66666666666669" height="23.333333333333343"/>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="Name">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="SfU-L3-VcK" secondAttribute="trailing" constant="15" id="3Sr-hw-JVZ"/>
+                                                <constraint firstItem="SfU-L3-VcK" firstAttribute="leading" secondItem="9gg-SY-PIM" secondAttribute="leading" constant="15" id="VOF-2o-GuE"/>
+                                                <constraint firstAttribute="bottom" secondItem="SfU-L3-VcK" secondAttribute="bottom" constant="15" id="XuA-ar-K8W"/>
+                                                <constraint firstItem="SfU-L3-VcK" firstAttribute="top" secondItem="9gg-SY-PIM" secondAttribute="top" constant="15" id="zuq-W7-HoI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="b4H-Jl-e01" id="IUT-Jb-jay"/>
+                                            <outlet property="licenseLabel" destination="AYB-8g-lfU" id="vaZ-mo-mo5"/>
+                                            <outlet property="repositoryNameLabel" destination="66b-Ty-82K" id="It1-hH-6yA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pkf-75-zX7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pkf-75-zX7" firstAttribute="bottom" secondItem="WCc-3S-ZN8" secondAttribute="bottom" id="D9d-Oq-N3Z"/>
+                            <constraint firstItem="WCc-3S-ZN8" firstAttribute="top" secondItem="pkf-75-zX7" secondAttribute="top" id="h2y-E8-bnd"/>
+                            <constraint firstItem="pkf-75-zX7" firstAttribute="trailing" secondItem="WCc-3S-ZN8" secondAttribute="trailing" id="heV-hI-f2B"/>
+                            <constraint firstItem="WCc-3S-ZN8" firstAttribute="leading" secondItem="pkf-75-zX7" secondAttribute="leading" id="oLN-Kr-fpj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repositoriesTableView" destination="WCc-3S-ZN8" id="WJ5-XA-Kee"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l4W-so-nAv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406.87022900763355" y="-27.464788732394368"/>
         </scene>
     </scenes>
     <resources>
