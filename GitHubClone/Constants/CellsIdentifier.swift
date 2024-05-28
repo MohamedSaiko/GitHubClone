@@ -7,6 +7,10 @@
 
 import Foundation
 
-struct CellsIdentifier {
+final class CellsIdentifier {
+    static let shared = CellsIdentifier()
+    let userCellID = "UserCell"
+    
+    private init() {}
     
 }
