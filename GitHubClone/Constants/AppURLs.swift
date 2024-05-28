@@ -20,4 +20,8 @@ final class AppURLs {
     func formatURL(withUsername username: String) -> String {
         "/\(username)/repos"
     }
+    
+    func createForksURL(fromusername name: String, FromRepository repository: String) -> String {
+            return "https://api.github.com/repos/\(name)/\(repository)/forks"
+    }
 }
