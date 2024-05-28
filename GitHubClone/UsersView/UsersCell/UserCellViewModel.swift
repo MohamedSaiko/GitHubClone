@@ -35,7 +35,7 @@ final class UserCellViewModel {
                     }
                 }
                 
-            case .failure(let error):
+            case .failure(_):
                 if let cachedImage = self.imageCache.object(forKey: url as NSURL) {
                     DispatchQueue.main.async {
                         completion(cachedImage as Data)

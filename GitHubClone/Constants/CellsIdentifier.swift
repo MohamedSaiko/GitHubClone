@@ -10,7 +10,7 @@ import Foundation
 final class CellsIdentifier {
     static let shared = CellsIdentifier()
     let userCellID = "UserCell"
+    let repositoryCellID = "RepositoryCell"
     
     private init() {}
-    
 }
