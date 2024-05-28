@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct Fork: Decodable {
+    let owner: Owner
+}
