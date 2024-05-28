@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+final class StoryboardIdentifier {
+    static let shared = StoryboardIdentifier()
+    let usersViewControllerID = "UsersViewController"
+    let repositoriesViewControllerID = "RepositoriesViewController"
+    
+    private init() {}
+}
