@@ -16,6 +16,7 @@ final class UsersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usersTableView.dataSource = self
+        usersTableView.delegate = self
         
         createSpinner()
         updateTableView()
@@ -56,5 +57,16 @@ extension UsersViewController: UITableViewDataSource {
         
         userCell.configure(fromUser: usersViewModel.users[indexPath.row])
         return userCell
+    }
+}
+
+//MARK: UsersTableViewDelegate
+
+extension UsersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repositoriesViewController = storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.shared.repositoriesViewControllerID) as! RepositoriesViewController
+        repositoriesViewController.username = usersViewModel.users[indexPath.row
+        ].login
+        navigationController?.pushViewController(repositoriesViewController, animated: true)
     }
 }
