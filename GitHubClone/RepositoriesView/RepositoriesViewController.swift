@@ -8,22 +8,42 @@
 import UIKit
 
 class RepositoriesViewController: UIViewController {
-
+    private let repositoriesViewModel = RepositoriesViewModel(networkManager: NetworkManager())
+    var username = ""
+    
+    @IBOutlet weak var repositoriesTableView: UITableView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.title = "\(username)'s Repositories"
+        repositoriesTableView.dataSource = self
+        
+        repositoriesViewModel.getRepositories(withUsername: username) { [weak self] in
+            guard let self else {
+                return
+            }
+            
+            repositoriesTableView.reloadData()
+        }
+    }
+}
 
-        // Do any additional setup after loading the view.
+//MARK: RepositoriesTableViewDataSource
+
+extension RepositoriesViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repositoriesViewModel.repositories.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let repositoryCell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifier.shared.repositoryCellID, for: indexPath) as? RepositoryCell
+        
+        guard let repositoryCell = repositoryCell else {
+            return UITableViewCell()
+        }
+        
+        repositoryCell.configure(fromRepository: repositoriesViewModel.repositories[indexPath.row])
+        return repositoryCell
     }
-    */
-
 }
