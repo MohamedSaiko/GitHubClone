@@ -8,25 +8,35 @@
 import UIKit
 
 final class UsersViewController: UIViewController {
-    let usersViewModel = UsersViewModel(networkManager: NetworkManager())
+    private let usersViewModel = UsersViewModel(networkManager: NetworkManager())
     
     @IBOutlet weak private var usersTableView: UITableView!
+    private var spinner = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         usersTableView.dataSource = self
         
+        createSpinner()
         updateTableView()
     }
     
-    func updateTableView() {
+    private func updateTableView() {
         usersViewModel.getUsers { [weak self] in
             guard let self else {
                 return
             }
             
+            spinner.stopAnimating()
             self.usersTableView.reloadData()
         }
+    }
+    
+    private func createSpinner() {
+        spinner.center = view.center
+        view.addSubview(spinner)
+        spinner.startAnimating()
+        spinner.hidesWhenStopped = true
     }
 }
 
