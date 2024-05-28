@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct AppURLs {
-    let usersURL
+final class AppURLs {
+    static let shared = AppURLs()
+    let usersURL = "https://api.github.com/users"
+    
+    private init() {}
+    
+    func paginate(perPage: Int) -> String {
+        "?per_page=\(perPage)"
+    }
 }
