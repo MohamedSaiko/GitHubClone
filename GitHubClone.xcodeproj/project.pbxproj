@@ -173,8 +173,7 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = RepositoriesView;
-			path = Users;
+			path = RepositoriesView;
 			sourceTree = "<group>";
 		};
 		DBCBA2722C04719600E31EEB /* ForksView */ = {
