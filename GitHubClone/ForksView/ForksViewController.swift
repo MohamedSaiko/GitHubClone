@@ -8,7 +8,7 @@
 import UIKit
 
 class ForksViewController: UIViewController {
-    private let forksViewModel = ForksViewModel(networkManager: NetworkManager())
+    var forksViewModel: ForksViewModel?
     var repository = ""
     var username = ""
     
@@ -24,7 +24,7 @@ class ForksViewController: UIViewController {
     }
     
     private func updateTableView() {
-        forksViewModel.getforks(withUsername: username, withRepository: repository) { [weak self] in
+        forksViewModel?.getforks(withUsername: username, withRepository: repository) { [weak self] in
             guard let self else {
                 return
             }
@@ -46,13 +46,13 @@ class ForksViewController: UIViewController {
 
 extension ForksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forksViewModel.forks.count
+        return forksViewModel?.forks.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let forkCell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifier.shared.forkCellID, for: indexPath) as? ForkCell
         
-        guard let forkCell = forkCell else {
+        guard let forkCell = forkCell, let forksViewModel = forksViewModel else {
             return UITableViewCell()
         }
         
