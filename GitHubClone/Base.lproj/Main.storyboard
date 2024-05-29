@@ -200,12 +200,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4H-Jl-e01" userLabel="Description">
-                                                            <rect key="frame" x="0.0" y="139.66666666666666" width="292.66666666666669" height="23.333333333333343"/>
+                                                            <rect key="frame" x="0.0" y="139.66666666666666" width="292.66666666666669" height="25.666666666666657"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Name">
                                                                     <attributes>
                                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                        <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                                        <font key="NSFont" size="22" name="HelveticaNeue"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -213,12 +213,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYB-8g-lfU" userLabel="License">
-                                                            <rect key="frame" x="0.0" y="272.66666666666669" width="292.66666666666669" height="23.333333333333314"/>
+                                                            <rect key="frame" x="0.0" y="275" width="292.66666666666669" height="21"/>
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Name">
                                                                     <attributes>
                                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                        <font key="NSFont" size="20" name="HelveticaNeue"/>
+                                                                        <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
