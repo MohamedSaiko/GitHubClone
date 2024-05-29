@@ -59,7 +59,9 @@ final class UsersViewModel {
                     users.sort {
                         $0.id < $1.id
                     }
+                    
                     completion()
+                    
                 case .failure(let error):
                     print(NetworkError.unknownError(error))
                 }
