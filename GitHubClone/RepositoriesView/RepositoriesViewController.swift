@@ -8,7 +8,7 @@
 import UIKit
 
 class RepositoriesViewController: UIViewController {
-    private let repositoriesViewModel = RepositoriesViewModel(networkManager: NetworkManager())
+    var repositoriesViewModel: RepositoriesViewModel?
     var username = ""
     
     @IBOutlet private weak var repositoriesTableView: UITableView!
@@ -25,7 +25,7 @@ class RepositoriesViewController: UIViewController {
     }
     
     private func updateTableView() {
-        repositoriesViewModel.getRepositories(withUsername: username) { [weak self] in
+        repositoriesViewModel?.getRepositories(withUsername: username) { [weak self] in
             guard let self else {
                 return
             }
@@ -47,13 +47,13 @@ class RepositoriesViewController: UIViewController {
 
 extension RepositoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositoriesViewModel.repositories.count
+        return repositoriesViewModel?.repositories.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let repositoryCell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifier.shared.repositoryCellID, for: indexPath) as? RepositoryCell
         
-        guard let repositoryCell = repositoryCell else {
+        guard let repositoryCell = repositoryCell, let repositoriesViewModel = repositoriesViewModel else {
             return UITableViewCell()
         }
         
@@ -66,15 +66,6 @@ extension RepositoriesViewController: UITableViewDataSource {
 
 extension RepositoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let forksViewController = storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.shared.forksViewController) as? ForksViewController
-        
-        guard let forksViewController = forksViewController else {
-            return
-        }
-        
-        forksViewController.username = repositoriesViewModel.repositories[indexPath.row].owner.login
-        forksViewController.repository = repositoriesViewModel.repositories[indexPath.row].name
-        
-        navigationController?.pushViewController(forksViewController, animated: true)
+        repositoriesViewModel?.goToForksViewController(withIndex: indexPath.row)
     }
 }
