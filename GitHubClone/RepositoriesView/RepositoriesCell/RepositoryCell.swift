@@ -21,7 +21,7 @@ class RepositoryCell: UITableViewCell {
             return
         }
         
-        descriptionLabel.text = "Description:\n" + description
+        descriptionLabel.text = description
         licenseLabel.text = "License: \(license.name)"
     }
 }
