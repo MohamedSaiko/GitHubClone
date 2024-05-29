@@ -9,6 +9,7 @@ import Foundation
 
 final class ForksViewModel {
     private let networkManager: NetworkManager
+    weak var coordinator: ForksViewCoordinator?
     
     private(set) var forks = [Fork]()
     

@@ -8,7 +8,7 @@
 import UIKit
 
 final class UsersViewController: UIViewController {
-    private let usersViewModel = UsersViewModel(networkManager: NetworkManager())
+    var usersViewModel: UsersViewModel?
     
     @IBOutlet weak private var usersTableView: UITableView!
     private var spinner = UIActivityIndicatorView()
@@ -23,7 +23,7 @@ final class UsersViewController: UIViewController {
     }
     
     private func updateTableView() {
-        usersViewModel.getUsers { [weak self] in
+        usersViewModel?.getUsers { [weak self] in
             guard let self else {
                 return
             }
@@ -45,13 +45,13 @@ final class UsersViewController: UIViewController {
 
 extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersViewModel.users.count
+        return usersViewModel?.users.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userCell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifier.shared.userCellID, for: indexPath) as? UserCell
         
-        guard let userCell = userCell else {
+        guard let userCell = userCell, let usersViewModel = usersViewModel else {
             return UITableViewCell()
         }
         
@@ -64,13 +64,6 @@ extension UsersViewController: UITableViewDataSource {
 
 extension UsersViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let repositoriesViewController = storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.shared.repositoriesViewControllerID) as? RepositoriesViewController
-        
-        guard let repositoriesViewController = repositoriesViewController else {
-            return
-        }
-        
-        repositoriesViewController.username = usersViewModel.users[indexPath.row].login
-        navigationController?.pushViewController(repositoriesViewController, animated: true)
+        usersViewModel?.goToRepositoriesViewController(withIndex: indexPath.row)
     }
 }

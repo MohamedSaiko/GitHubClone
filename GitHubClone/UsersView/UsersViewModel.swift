@@ -9,6 +9,7 @@ import Foundation
 
 final class UsersViewModel {
     private let networkManager: NetworkManager
+    weak var coordinator: UsersViewCoordinator?
     
     private(set) var usersData = [UserData]()
     private(set) var users = [User]()
@@ -59,11 +60,19 @@ final class UsersViewModel {
                     users.sort {
                         $0.id < $1.id
                     }
+                    
                     completion()
+                    
                 case .failure(let error):
                     print(NetworkError.unknownError(error))
                 }
             }
         }
+    }
+    
+    func goToRepositoriesViewController(withIndex index: Int) {
+        let username = users[index].login
+        
+        coordinator?.goToRepositoriesViewController(withUsername: username)
     }
 }
