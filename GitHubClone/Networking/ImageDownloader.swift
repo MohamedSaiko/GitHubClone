@@ -13,8 +13,14 @@ enum ImageDownloadError: Error {
 }
 
 final class ImageDownloader {
+    private let URLSession: URLSession
+    
+    init(URLSession: URLSession = .shared) {
+        self.URLSession = URLSession
+    }
+    
     func download(fromURL url: URL, completion: @escaping (Result<Data, ImageDownloadError>) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.dataTask(with: url) { data, response, error in
             guard let data = data else {
                 completion(.failure(.downloadingError))
                 return
