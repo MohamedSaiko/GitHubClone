@@ -12,7 +12,7 @@ final class UsersViewModel {
     weak var coordinator: UsersViewCoordinator?
     
     private(set) var usersData = [UserData]()
-    private(set) var users = [User]()
+    private(set) var users = [String : User]()
     
     private var perPage = 1
     
@@ -58,11 +58,7 @@ final class UsersViewModel {
                 
                 switch result {
                 case .success(let user):
-                    users.append(user)
-                    users.sort {
-                        $0.id < $1.id
-                    }
-                    
+                    users[user.login] = user
                     completion()
                     
                 case .failure(let error):
@@ -75,7 +71,13 @@ final class UsersViewModel {
     }
     
     func goToRepositoriesViewController(withIndex index: Int) {
-        let username = users[index].login
+        let login = usersData[index].login
+        
+        guard let user = users[login] else {
+            return
+        }
+        
+        let username = user.login
         coordinator?.goToRepositoriesViewController(withUsername: username)
     }
     
