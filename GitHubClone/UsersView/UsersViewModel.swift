@@ -38,7 +38,9 @@ final class UsersViewModel {
                 }
                 
             case .failure(let error):
-                self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
+                }
             }
         }
     }
@@ -64,7 +66,9 @@ final class UsersViewModel {
                     completion()
                     
                 case .failure(let error):
-                    self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
+                    DispatchQueue.main.async {
+                        self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
+                    }
                 }
             }
         }
