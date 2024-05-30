@@ -50,12 +50,13 @@ extension UsersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userCell = tableView.dequeueReusableCell(withIdentifier: CellsIdentifier.shared.userCellID, for: indexPath) as? UserCell
+        let login = usersViewModel?.usersData[indexPath.row].login ?? String()
         
-        guard let userCell = userCell, let usersViewModel = usersViewModel else {
+        guard let userCell = userCell, let user = usersViewModel?.users[login] else {
             return UITableViewCell()
         }
         
-        userCell.configure(fromUser: usersViewModel.users[indexPath.row])
+        userCell.configure(fromUser: user)
         return userCell
     }
 }
