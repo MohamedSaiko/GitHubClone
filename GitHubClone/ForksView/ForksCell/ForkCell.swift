@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForkCell: UITableViewCell {
+final class ForkCell: UITableViewCell {
     @IBOutlet weak var forkName: UILabel!
     
     func configure(fromFork fork: Fork) {
