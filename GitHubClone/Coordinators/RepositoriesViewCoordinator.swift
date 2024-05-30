@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepositoriesViewCoordinator: Coordinator {
+final class RepositoriesViewCoordinator: Coordinator {
     weak var parentCoordinator: MainCoordinator?
     
     var children = [Coordinator]()
@@ -37,5 +37,12 @@ class RepositoriesViewCoordinator: Coordinator {
     
     func goToForksViewController(withUsername username: String, withRepository repository: String) {
         parentCoordinator?.goToForksViewController(withUsername: username, withRepository: repository)
+    }
+    
+    func showAlert(withTitle title: String, withMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(action)
+        navigationController.present(alert, animated: true)
     }
 }

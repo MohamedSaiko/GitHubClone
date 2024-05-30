@@ -38,7 +38,7 @@ final class UsersViewModel {
                 }
                 
             case .failure(let error):
-                print(NetworkError.unknownError(error))
+                self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
             }
         }
     }
@@ -64,7 +64,7 @@ final class UsersViewModel {
                     completion()
                     
                 case .failure(let error):
-                    print(NetworkError.unknownError(error))
+                    self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
                 }
             }
         }
@@ -72,7 +72,6 @@ final class UsersViewModel {
     
     func goToRepositoriesViewController(withIndex index: Int) {
         let username = users[index].login
-        
         coordinator?.goToRepositoriesViewController(withUsername: username)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UsersViewCoordinator: Coordinator {
+final class UsersViewCoordinator: Coordinator {
     weak var parentCoordinator: MainCoordinator?
     
     var children = [Coordinator]()
@@ -35,5 +35,12 @@ class UsersViewCoordinator: Coordinator {
     
     func goToRepositoriesViewController(withUsername username: String) {
         parentCoordinator?.goToRepositoriesViewController(withUsername: username)
+    }
+    
+    func showAlert(withTitle title: String, withMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(action)
+        navigationController.present(alert, animated: true)
     }
 }

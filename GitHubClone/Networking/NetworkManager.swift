@@ -15,7 +15,7 @@ enum NetworkError: Error {
     case noResponse
 }
 
-struct NetworkManager {
+final class NetworkManager {
     func loadData<T: Decodable>(withURL urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void) {
         let url = URL(string: urlString)
         

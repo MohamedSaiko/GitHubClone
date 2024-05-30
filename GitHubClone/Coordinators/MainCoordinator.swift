@@ -14,7 +14,7 @@ protocol Coordinator: AnyObject {
     func start()
 }
 
-class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
+final class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var children: [Coordinator] = []
     var navigationController: UINavigationController
     

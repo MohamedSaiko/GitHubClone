@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForksViewController: UIViewController {
+final class ForksViewController: UIViewController {
     var forksViewModel: ForksViewModel?
     var repository = ""
     var username = ""
@@ -17,6 +17,9 @@ class ForksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "\(repository)'s Forks"
+        navigationController?.navigationBar.prefersLargeTitles = false
+
         forksTableView.dataSource = self
         
         createSpinner()
