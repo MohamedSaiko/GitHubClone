@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class ForksViewCoordinator: Coordinator {
+final class ForksViewCoordinator: Coordinator {
     weak var parentCoordinator: MainCoordinator?
     
     var children = [Coordinator]()
@@ -35,5 +35,12 @@ class ForksViewCoordinator: Coordinator {
         forksViewController.username = username
         
         navigationController.pushViewController(forksViewController, animated: true)
+    }
+    
+    func showAlert(withTitle title: String, withMessage message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .cancel)
+        alert.addAction(action)
+        navigationController.present(alert, animated: true)
     }
 }
