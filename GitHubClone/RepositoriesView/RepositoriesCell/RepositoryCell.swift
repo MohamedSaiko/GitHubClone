@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepositoryCell: UITableViewCell {
+final class RepositoryCell: UITableViewCell {
     @IBOutlet private weak var repositoryNameLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var licenseLabel: UILabel!
