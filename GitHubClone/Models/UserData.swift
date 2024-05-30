@@ -9,6 +9,5 @@ import Foundation
 
 struct UserData: Decodable {
     let url: String
+    let login: String
 }
-
-
