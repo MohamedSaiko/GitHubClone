@@ -27,22 +27,30 @@ final class UserCellViewModel {
                 self.imageCache.setObject(image as NSData, forKey: url as NSURL)
                 
                 if let cachedImage = self.imageCache.object(forKey: url as NSURL) {
-                    DispatchQueue.main.async {
+                    self.checkForMainThread {
                         completion(cachedImage as Data)
                     }
                 } else {
-                    DispatchQueue.main.async {
+                    self.checkForMainThread {
                         completion(image)
                     }
                 }
                 
             case .failure(_):
                 if let cachedImage = self.imageCache.object(forKey: url as NSURL) {
-                    DispatchQueue.main.async {
+                    self.checkForMainThread {
                         completion(cachedImage as Data)
                     }
                 }
             }
+        }
+    }
+    
+    func checkForMainThread(completion: @escaping () -> Void) {
+        if Thread.isMainThread {
+            completion()
+        } else {
+            DispatchQueue.main.async(execute: completion)
         }
     }
 }
