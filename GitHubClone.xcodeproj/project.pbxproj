@@ -19,7 +19,6 @@
 		DBCBA2432C04519200E31EEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2422C04519200E31EEB /* Base */; };
 		DBCBA2452C04519200E31EEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2442C04519200E31EEB /* Assets.xcassets */; };
 		DBCBA2482C04519200E31EEB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DBCBA2472C04519200E31EEB /* Base */; };
-		DBCBA2532C04519200E31EEB /* GitHubCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2522C04519200E31EEB /* GitHubCloneTests.swift */; };
 		DBCBA25D2C04519300E31EEB /* GitHubCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA25C2C04519300E31EEB /* GitHubCloneUITests.swift */; };
 		DBCBA25F2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA25E2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift */; };
 		DBCBA26C2C0453D100E31EEB /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA26B2C0453D100E31EEB /* UserCell.swift */; };
@@ -75,7 +74,6 @@
 		DBCBA2472C04519200E31EEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBCBA2492C04519200E31EEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBCBA24E2C04519200E31EEB /* GitHubCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBCBA2522C04519200E31EEB /* GitHubCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneTests.swift; sourceTree = "<group>"; };
 		DBCBA2582C04519300E31EEB /* GitHubCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA25C2C04519300E31EEB /* GitHubCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneUITests.swift; sourceTree = "<group>"; };
 		DBCBA25E2C04519300E31EEB /* GitHubCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		DBCBA2512C04519200E31EEB /* GitHubCloneTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBA2522C04519200E31EEB /* GitHubCloneTests.swift */,
 			);
 			path = GitHubCloneTests;
 			sourceTree = "<group>";
@@ -444,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBCBA2532C04519200E31EEB /* GitHubCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
