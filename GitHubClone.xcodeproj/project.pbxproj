@@ -39,6 +39,13 @@
 		DBCBA29A2C060EF700E31EEB /* ForkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA2992C060EF700E31EEB /* ForkCell.swift */; };
 		DBCBA29C2C060FE300E31EEB /* ForksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA29B2C060FE300E31EEB /* ForksViewModel.swift */; };
 		DBCBA29E2C06102200E31EEB /* Fork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA29D2C06102200E31EEB /* Fork.swift */; };
+		DBD5377D2C08D06200422450 /* Forks.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD5377C2C08D06200422450 /* Forks.json */; };
+		DBD5377F2C08D0A100422450 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD5377E2C08D0A100422450 /* Users.json */; };
+		DBD537812C08D0C100422450 /* Repositories.json in Resources */ = {isa = PBXBuildFile; fileRef = DBD537802C08D0C100422450 /* Repositories.json */; };
+		DBD537832C08D0EA00422450 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537822C08D0EA00422450 /* MockNetworkManager.swift */; };
+		DBD537862C08D15D00422450 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537852C08D15D00422450 /* UsersViewModelTests.swift */; };
+		DBD537882C08D19900422450 /* RepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */; };
+		DBD5378A2C08D1BE00422450 /* ForksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +102,13 @@
 		DBCBA2992C060EF700E31EEB /* ForkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCell.swift; sourceTree = "<group>"; };
 		DBCBA29B2C060FE300E31EEB /* ForksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksViewModel.swift; sourceTree = "<group>"; };
 		DBCBA29D2C06102200E31EEB /* Fork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fork.swift; sourceTree = "<group>"; };
+		DBD5377C2C08D06200422450 /* Forks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Forks.json; sourceTree = "<group>"; };
+		DBD5377E2C08D0A100422450 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		DBD537802C08D0C100422450 /* Repositories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repositories.json; sourceTree = "<group>"; };
+		DBD537822C08D0EA00422450 /* MockNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		DBD537852C08D15D00422450 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
+		DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTests.swift; sourceTree = "<group>"; };
+		DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForksViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +190,8 @@
 		DBCBA2512C04519200E31EEB /* GitHubCloneTests */ = {
 			isa = PBXGroup;
 			children = (
+				DBD5377B2C08D03800422450 /* Mocks */,
+				DBD537842C08D10900422450 /* ViewModelsTests */,
 			);
 			path = GitHubCloneTests;
 			sourceTree = "<group>";
@@ -276,6 +292,27 @@
 			path = ForksCell;
 			sourceTree = "<group>";
 		};
+		DBD5377B2C08D03800422450 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DBD537822C08D0EA00422450 /* MockNetworkManager.swift */,
+				DBD5377E2C08D0A100422450 /* Users.json */,
+				DBD537802C08D0C100422450 /* Repositories.json */,
+				DBD5377C2C08D06200422450 /* Forks.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		DBD537842C08D10900422450 /* ViewModelsTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBD537852C08D15D00422450 /* UsersViewModelTests.swift */,
+				DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */,
+				DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */,
+			);
+			path = ViewModelsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -347,6 +384,7 @@
 					};
 					DBCBA24D2C04519200E31EEB = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 						TestTargetID = DBCBA2372C04519200E31EEB;
 					};
 					DBCBA2572C04519300E31EEB = {
@@ -390,6 +428,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD5377F2C08D0A100422450 /* Users.json in Resources */,
+				DBD537812C08D0C100422450 /* Repositories.json in Resources */,
+				DBD5377D2C08D06200422450 /* Forks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +482,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD5378A2C08D1BE00422450 /* ForksViewModelTests.swift in Sources */,
+				DBD537882C08D19900422450 /* RepositoriesViewModelTests.swift in Sources */,
+				DBD537832C08D0EA00422450 /* MockNetworkManager.swift in Sources */,
+				DBD537862C08D15D00422450 /* UsersViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,6 +713,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RDX6Y8GPTD;
@@ -677,6 +723,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.MohamedSayed.GitHubCloneTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GitHubClone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GitHubClone";
@@ -688,6 +735,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RDX6Y8GPTD;
