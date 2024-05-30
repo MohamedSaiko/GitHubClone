@@ -30,12 +30,12 @@ final class RepositoriesViewModel {
             switch result {
             case .success(let repositoryData):
                 self.repositories.append(contentsOf: repositoryData)
-                DispatchQueue.main.async {
+                self.checkForMainThread {
                     completion()
                 }
                 
             case .failure(let error):
-                DispatchQueue.main.async {
+                self.checkForMainThread {
                     self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
                 }
             }
@@ -47,5 +47,13 @@ final class RepositoriesViewModel {
         let repository = repositories[index].name
         
         coordinator?.goToForksViewController(withUsername: username, withRepository: repository)
+    }
+    
+    func checkForMainThread(completion: @escaping () -> Void) {
+        if Thread.isMainThread {
+            completion()
+        } else {
+            DispatchQueue.main.async(execute: completion)
+        }
     }
 }
