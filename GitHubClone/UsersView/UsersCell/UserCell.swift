@@ -8,7 +8,7 @@
 import UIKit
 
 final class UserCell: UITableViewCell {
-    private let userCellViewModel = UserCellViewModel(imageDownloader: ImageDownloader())
+    private let userCellViewModel = UserCellViewModel(imageDownloader: ImageDownloader(), imageCache: NSCache<NSURL, NSData>())
     
     @IBOutlet weak private var userImage: UIImageView!
     @IBOutlet weak private var usernameLabel: UILabel!
