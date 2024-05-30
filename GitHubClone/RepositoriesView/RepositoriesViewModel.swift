@@ -35,7 +35,7 @@ final class RepositoriesViewModel {
                 }
                 
             case .failure(let error):
-                print(NetworkError.unknownError(error))
+                self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
             }
         }
     }
