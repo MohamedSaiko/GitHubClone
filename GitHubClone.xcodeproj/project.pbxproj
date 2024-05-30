@@ -11,6 +11,8 @@
 		DB1F0C9F2C07242E00ADF386 /* UsersViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0C9E2C07242E00ADF386 /* UsersViewCoordinator.swift */; };
 		DB1F0CA12C0724B300ADF386 /* RepositoriesViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA02C0724B300ADF386 /* RepositoriesViewCoordinator.swift */; };
 		DB1F0CA32C072BCB00ADF386 /* ForksViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA22C072BCB00ADF386 /* ForksViewCoordinator.swift */; };
+		DB1F0CA52C08154B00ADF386 /* ForkCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */; };
+		DB1F0CA72C0818ED00ADF386 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA62C0818ED00ADF386 /* Owner.swift */; };
 		DBCBA23C2C04519200E31EEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23B2C04519200E31EEB /* AppDelegate.swift */; };
 		DBCBA23E2C04519200E31EEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */; };
 		DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23F2C04519200E31EEB /* UsersViewController.swift */; };
@@ -62,6 +64,8 @@
 		DB1F0C9E2C07242E00ADF386 /* UsersViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewCoordinator.swift; sourceTree = "<group>"; };
 		DB1F0CA02C0724B300ADF386 /* RepositoriesViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewCoordinator.swift; sourceTree = "<group>"; };
 		DB1F0CA22C072BCB00ADF386 /* ForksViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksViewCoordinator.swift; sourceTree = "<group>"; };
+		DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCellViewModel.swift; sourceTree = "<group>"; };
+		DB1F0CA62C0818ED00ADF386 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		DBCBA2382C04519200E31EEB /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA23B2C04519200E31EEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				DBCBA2772C04741E00E31EEB /* UserData.swift */,
 				DBCBA2792C04750B00E31EEB /* User.swift */,
 				DBCBA2912C05D0FB00E31EEB /* Repository.swift */,
+				DB1F0CA62C0818ED00ADF386 /* Owner.swift */,
 				DBCBA29D2C06102200E31EEB /* Fork.swift */,
 			);
 			path = Models;
@@ -268,6 +273,7 @@
 		DBCBA2982C060EC300E31EEB /* ForksCell */ = {
 			isa = PBXGroup;
 			children = (
+				DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */,
 				DBCBA2992C060EF700E31EEB /* ForkCell.swift */,
 			);
 			path = ForksCell;
@@ -408,6 +414,7 @@
 				DBCBA29A2C060EF700E31EEB /* ForkCell.swift in Sources */,
 				DBCBA27D2C04762F00E31EEB /* NetworkManager.swift in Sources */,
 				DBCBA26C2C0453D100E31EEB /* UserCell.swift in Sources */,
+				DB1F0CA72C0818ED00ADF386 /* Owner.swift in Sources */,
 				DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */,
 				DB1F0CA32C072BCB00ADF386 /* ForksViewCoordinator.swift in Sources */,
 				DBCBA29C2C060FE300E31EEB /* ForksViewModel.swift in Sources */,
@@ -424,6 +431,7 @@
 				DBCBA27F2C0488BB00E31EEB /* AppURLs.swift in Sources */,
 				DB1F0CA12C0724B300ADF386 /* RepositoriesViewCoordinator.swift in Sources */,
 				DBCBA23E2C04519200E31EEB /* SceneDelegate.swift in Sources */,
+				DB1F0CA52C08154B00ADF386 /* ForkCellViewModel.swift in Sources */,
 				DBCBA2922C05D0FB00E31EEB /* Repository.swift in Sources */,
 				DBCBA2752C04729600E31EEB /* CellsIdentifier.swift in Sources */,
 				DBCBA2882C05949100E31EEB /* ImageDownloader.swift in Sources */,
