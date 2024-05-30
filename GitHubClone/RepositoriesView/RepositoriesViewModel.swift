@@ -8,14 +8,14 @@
 import Foundation
 
 final class RepositoriesViewModel {
-    private let networkManager: NetworkManager
+    private let networkManager: AnyNetworkManager
     weak var coordinator: RepositoriesViewCoordinator?
     
     private(set) var repositories = [Repository]()
     
     private var perPage = 1
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
     }
     

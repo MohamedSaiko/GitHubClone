@@ -7,12 +7,16 @@
 
 import Foundation
 
+protocol AnyImageDownloader {
+    func download(fromURL url: URL, completion: @escaping (Result<Data, ImageDownloadError>) -> Void)
+}
+
 enum ImageDownloadError: Error {
     case downloadingError
     case noResponse
 }
 
-final class ImageDownloader {
+final class ImageDownloader: AnyImageDownloader {
     private let URLSession: URLSession
     
     init(URLSession: URLSession = .shared) {

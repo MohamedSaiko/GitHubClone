@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol AnyNetworkManager {
+    func loadData<T: Decodable>(withURL urlString: String, completion: @escaping (Result<T, NetworkError>) -> Void)
+}
+
 enum NetworkError: Error {
     case invalidURL
     case networkError
@@ -15,7 +19,7 @@ enum NetworkError: Error {
     case noResponse
 }
 
-final class NetworkManager {
+final class NetworkManager: AnyNetworkManager {
     private let URLSession: URLSession
     private let jsonDecoder: JSONDecoder
     

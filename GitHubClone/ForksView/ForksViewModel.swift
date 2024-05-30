@@ -8,14 +8,14 @@
 import Foundation
 
 final class ForksViewModel {
-    private let networkManager: NetworkManager
+    private let networkManager: AnyNetworkManager
     weak var coordinator: ForksViewCoordinator?
     
     private(set) var forks = [Fork]()
     
     private var perPage = 1
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
     }
     
