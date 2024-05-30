@@ -30,15 +30,23 @@ final class ForksViewModel {
             switch result {
             case .success(let forkData):
                 self.forks.append(contentsOf: forkData)
-                    DispatchQueue.main.async {
-                        completion()
+                self.checkForMainThread {
+                    completion()
                 }
                 
             case .failure(let error):
-                DispatchQueue.main.async {
+                self.checkForMainThread {
                     self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
                 }
             }
+        }
+    }
+    
+    func checkForMainThread(completion: @escaping () -> Void) {
+        if Thread.isMainThread {
+            completion()
+        } else {
+            DispatchQueue.main.async(execute: completion)
         }
     }
 }
