@@ -32,13 +32,13 @@ final class UsersViewModel {
             case .success(let userData):
                 self.usersData.append(contentsOf: userData)
                 self.getSingleUser {
-                    DispatchQueue.main.async {
+                    self.checkForMainThread {
                         completion()
                     }
                 }
                 
             case .failure(let error):
-                DispatchQueue.main.async {
+                self.checkForMainThread {
                     self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
                 }
             }
@@ -66,7 +66,7 @@ final class UsersViewModel {
                     completion()
                     
                 case .failure(let error):
-                    DispatchQueue.main.async {
+                    self.checkForMainThread {
                         self.coordinator?.showAlert(withTitle: "Error!", withMessage: error.localizedDescription)
                     }
                 }
@@ -77,5 +77,13 @@ final class UsersViewModel {
     func goToRepositoriesViewController(withIndex index: Int) {
         let username = users[index].login
         coordinator?.goToRepositoriesViewController(withUsername: username)
+    }
+    
+    func checkForMainThread(completion: @escaping () -> Void) {
+        if Thread.isMainThread {
+            completion()
+        } else {
+            DispatchQueue.main.async(execute: completion)
+        }
     }
 }
