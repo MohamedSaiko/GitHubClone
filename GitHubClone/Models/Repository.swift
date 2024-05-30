@@ -14,10 +14,6 @@ struct Repository: Decodable {
     let license: License?
 }
 
-struct Owner: Decodable {
-    let login: String
-}
-
 struct License: Decodable {
     let name: String
 }
