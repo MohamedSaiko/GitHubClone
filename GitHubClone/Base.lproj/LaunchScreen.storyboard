@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" secondItem="cb5-E9-gPZ" secondAttribute="height" multiplier="1:1" id="kMh-xm-gRZ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-8E-H79">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubWritten" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-8E-H79">
                                 <rect key="frame" x="96.666666666666686" y="441" width="200" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="k5X-Hi-mKd"/>
@@ -48,7 +48,7 @@
     </scenes>
     <resources>
         <image name="GitHubLogoImage" width="76.666664123535156" height="75"/>
-        <image name="Image" width="1000" height="410"/>
+        <image name="GitHubWritten" width="1000" height="410"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

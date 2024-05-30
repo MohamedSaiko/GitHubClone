@@ -46,6 +46,9 @@
 		DBD537862C08D15D00422450 /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537852C08D15D00422450 /* UsersViewModelTests.swift */; };
 		DBD537882C08D19900422450 /* RepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */; };
 		DBD5378A2C08D1BE00422450 /* ForksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */; };
+		DBEECE452C0919D9008A8F7D /* MockImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEECE442C0919D9008A8F7D /* MockImageDownloader.swift */; };
+		DBEECE472C091BAF008A8F7D /* UserCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEECE462C091BAF008A8F7D /* UserCellViewModelTests.swift */; };
+		DBEECE492C091EA7008A8F7D /* ForkCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEECE482C091EA7008A8F7D /* ForkCellViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		DBD537852C08D15D00422450 /* UsersViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
 		DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesViewModelTests.swift; sourceTree = "<group>"; };
 		DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForksViewModelTests.swift; sourceTree = "<group>"; };
+		DBEECE442C0919D9008A8F7D /* MockImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageDownloader.swift; sourceTree = "<group>"; };
+		DBEECE462C091BAF008A8F7D /* UserCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellViewModelTests.swift; sourceTree = "<group>"; };
+		DBEECE482C091EA7008A8F7D /* ForkCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCellViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD537822C08D0EA00422450 /* MockNetworkManager.swift */,
+				DBEECE442C0919D9008A8F7D /* MockImageDownloader.swift */,
 				DBD5377E2C08D0A100422450 /* Users.json */,
 				DBD537802C08D0C100422450 /* Repositories.json */,
 				DBD5377C2C08D06200422450 /* Forks.json */,
@@ -309,6 +316,8 @@
 				DBD537852C08D15D00422450 /* UsersViewModelTests.swift */,
 				DBD537872C08D19900422450 /* RepositoriesViewModelTests.swift */,
 				DBD537892C08D1BE00422450 /* ForksViewModelTests.swift */,
+				DBEECE462C091BAF008A8F7D /* UserCellViewModelTests.swift */,
+				DBEECE482C091EA7008A8F7D /* ForkCellViewModelTests.swift */,
 			);
 			path = ViewModelsTests;
 			sourceTree = "<group>";
@@ -485,7 +494,10 @@
 				DBD5378A2C08D1BE00422450 /* ForksViewModelTests.swift in Sources */,
 				DBD537882C08D19900422450 /* RepositoriesViewModelTests.swift in Sources */,
 				DBD537832C08D0EA00422450 /* MockNetworkManager.swift in Sources */,
+				DBEECE452C0919D9008A8F7D /* MockImageDownloader.swift in Sources */,
+				DBEECE492C091EA7008A8F7D /* ForkCellViewModelTests.swift in Sources */,
 				DBD537862C08D15D00422450 /* UsersViewModelTests.swift in Sources */,
+				DBEECE472C091BAF008A8F7D /* UserCellViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

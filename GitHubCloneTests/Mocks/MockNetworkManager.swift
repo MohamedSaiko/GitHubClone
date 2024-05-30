@@ -8,7 +8,7 @@
 import Foundation
 @testable import GitHubClone
 
-class MockNetworkManager: AnyNetworkManager {
+final class MockNetworkManager: AnyNetworkManager {
     var bundle: Bundle {
         return Bundle(for: type(of: self))
     }
