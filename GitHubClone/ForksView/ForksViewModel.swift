@@ -13,7 +13,7 @@ final class ForksViewModel {
     
     private(set) var forks = [Fork]()
     
-    private var perPage = 10
+    private var perPage = 1
     
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
