@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepositoriesViewController: UIViewController {
+final class RepositoriesViewController: UIViewController {
     var repositoriesViewModel: RepositoriesViewModel?
     var username = ""
     
@@ -16,7 +16,9 @@ class RepositoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "\(username)'s Repositories"
+        navigationItem.title = "\(username)'s Repositories"
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
         repositoriesTableView.dataSource = self
         repositoriesTableView.delegate = self
         
