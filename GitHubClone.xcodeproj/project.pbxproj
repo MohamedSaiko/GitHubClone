@@ -195,8 +195,8 @@
 		DBCBA26D2C0453E900E31EEB /* UsersCell */ = {
 			isa = PBXGroup;
 			children = (
-				DBCBA2892C05992200E31EEB /* UserCellViewModel.swift */,
 				DBCBA26B2C0453D100E31EEB /* UserCell.swift */,
+				DBCBA2892C05992200E31EEB /* UserCellViewModel.swift */,
 			);
 			path = UsersCell;
 			sourceTree = "<group>";
@@ -273,8 +273,8 @@
 		DBCBA2982C060EC300E31EEB /* ForksCell */ = {
 			isa = PBXGroup;
 			children = (
-				DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */,
 				DBCBA2992C060EF700E31EEB /* ForkCell.swift */,
+				DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */,
 			);
 			path = ForksCell;
 			sourceTree = "<group>";
