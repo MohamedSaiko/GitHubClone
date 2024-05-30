@@ -9,10 +9,11 @@ import Foundation
 
 final class UserCellViewModel {
     private let imageDownloader: ImageDownloader
-    private let imageCache = NSCache<NSURL, NSData>()
+    private let imageCache: NSCache<NSURL, NSData>
     
-    init(imageDownloader: ImageDownloader) {
+    init(imageDownloader: ImageDownloader, imageCache: NSCache<NSURL, NSData>) {
         self.imageDownloader = imageDownloader
+        self.imageCache = imageCache
     }
     
     func downloadImage(fromURL url: URL, completion: @escaping (Data) -> Void) {
