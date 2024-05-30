@@ -8,7 +8,7 @@
 import Foundation
 
 final class UsersViewModel {
-    private let networkManager: NetworkManager
+    private let networkManager: AnyNetworkManager
     weak var coordinator: UsersViewCoordinator?
     
     private(set) var usersData = [UserData]()
@@ -16,7 +16,7 @@ final class UsersViewModel {
     
     private var perPage = 1
     
-    init(networkManager: NetworkManager) {
+    init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
     }
     

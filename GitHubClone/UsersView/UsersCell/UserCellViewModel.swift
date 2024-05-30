@@ -8,10 +8,10 @@
 import Foundation
 
 final class UserCellViewModel {
-    private let imageDownloader: ImageDownloader
+    private let imageDownloader: AnyImageDownloader
     private let imageCache: NSCache<NSURL, NSData>
     
-    init(imageDownloader: ImageDownloader, imageCache: NSCache<NSURL, NSData>) {
+    init(imageDownloader: AnyImageDownloader, imageCache: NSCache<NSURL, NSData>) {
         self.imageDownloader = imageDownloader
         self.imageCache = imageCache
     }
