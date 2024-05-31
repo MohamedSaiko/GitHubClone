@@ -26,6 +26,8 @@ final class ForksViewController: UIViewController {
         updateTableView()
     }
     
+//MARK: ForksTableViewUpdateMthod
+    
     private func updateTableView() {
         forksViewModel?.getforks(withUsername: username, withRepository: repository) { [weak self] in
             guard let self else {

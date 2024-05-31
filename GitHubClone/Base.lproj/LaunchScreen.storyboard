@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubLogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-E9-gPZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubLogoImageWhite" translatesAutoresizingMaskIntoConstraints="NO" id="cb5-E9-gPZ">
                                 <rect key="frame" x="131.66666666666666" y="296" width="129.99999999999997" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="0Lb-Wi-02G"/>
                                     <constraint firstAttribute="width" secondItem="cb5-E9-gPZ" secondAttribute="height" multiplier="1:1" id="kMh-xm-gRZ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubWritten" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-8E-H79">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHubLogoWrittenWhite" translatesAutoresizingMaskIntoConstraints="NO" id="2Hn-8E-H79">
                                 <rect key="frame" x="96.666666666666686" y="441" width="200" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="k5X-Hi-mKd"/>
@@ -47,8 +47,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GitHubLogoImage" width="76.666664123535156" height="75"/>
-        <image name="GitHubWritten" width="1000" height="410"/>
+        <image name="GitHubLogoImageWhite" width="230" height="225"/>
+        <image name="GitHubLogoWrittenWhite" width="1000" height="410"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

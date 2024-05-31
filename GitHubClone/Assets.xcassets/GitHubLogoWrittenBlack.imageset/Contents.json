@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "GitHubLogoImage.png",
+      "filename" : "GitHubLogoWrittenBlack.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "GitHubLogoImage 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "GitHubLogoImage 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
