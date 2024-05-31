@@ -22,6 +22,8 @@ final class UsersViewController: UIViewController {
         updateTableView()
     }
     
+    //MARK: UsersTableViewUpdateMethod
+    
     private func updateTableView() {
         usersViewModel?.getUsers { [weak self] in
             guard let self else {

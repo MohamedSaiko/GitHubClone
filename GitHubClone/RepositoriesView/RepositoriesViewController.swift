@@ -26,6 +26,8 @@ final class RepositoriesViewController: UIViewController {
         updateTableView()
     }
     
+    //MARK: RepositoriesTableViewUpdateMethod
+    
     private func updateTableView() {
         repositoriesViewModel?.getRepositories(withUsername: username) { [weak self] in
             guard let self else {
