@@ -10,7 +10,7 @@ import UIKit
 
 final class MockImageDownloader: AnyImageDownloader {
     func download(fromURL url: URL, completion: @escaping (Result<Data, ImageDownloadError>) -> Void) {
-        let image = UIImage(named: "GitHubLogoImage")
+        let image = UIImage(named: "GitHubLogoImageBlack")
         guard let data = image?.pngData() else {
             completion(.failure(.downloadingError))
             return
