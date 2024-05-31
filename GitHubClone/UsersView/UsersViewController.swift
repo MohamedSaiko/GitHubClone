@@ -47,7 +47,7 @@ final class UsersViewController: UIViewController {
 
 extension UsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return usersViewModel?.users.count ?? 0
+        return usersViewModel?.usersData.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
