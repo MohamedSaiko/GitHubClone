@@ -14,7 +14,7 @@ final class UsersViewModel {
     private(set) var usersData = [UserData]()
     private(set) var users = [String : User]()
     
-    private var perPage = 1
+    private var perPage = 10
     
     init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
@@ -83,7 +83,7 @@ final class UsersViewModel {
         coordinator?.goToRepositoriesViewController(withUsername: username)
     }
     
-    func checkForMainThread(completion: @escaping () -> Void) {
+    private func checkForMainThread(completion: @escaping () -> Void) {
         if Thread.isMainThread {
             completion()
         } else {

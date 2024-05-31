@@ -10,8 +10,8 @@ import UIKit
 final class ForkCell: UITableViewCell {
     private let forkCellViewModel = UserCellViewModel(imageDownloader: ImageDownloader(), imageCache: NSCache<NSURL, NSData>())
     
-    @IBOutlet weak var forkName: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak private var forkName: UILabel!
+    @IBOutlet weak private var userImage: UIImageView!
     private var spinner = UIActivityIndicatorView()
     
     func configure(fromFork fork: Fork) {

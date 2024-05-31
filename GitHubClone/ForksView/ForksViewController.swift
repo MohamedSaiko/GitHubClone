@@ -19,14 +19,14 @@ final class ForksViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "\(repository)'s Forks"
         navigationController?.navigationBar.prefersLargeTitles = false
-
+        
         forksTableView.dataSource = self
         
         createSpinner()
         updateTableView()
     }
     
-//MARK: ForksTableViewUpdateMthod
+    //MARK: ForksTableViewUpdateMthod
     
     private func updateTableView() {
         forksViewModel?.getforks(withUsername: username, withRepository: repository) { [weak self] in

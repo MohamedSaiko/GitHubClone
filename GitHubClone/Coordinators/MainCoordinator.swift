@@ -62,14 +62,14 @@ final class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelega
             return
         }
         
-        // We’re still here – it means we’re popping the view controller, so we can check whether it’s a buy view controller
+        // We’re still here – it means we’re popping the view controller, so we can check whether it’s a users view controller
         if let usersViewController = fromViewController as? UsersViewController {
-            // We're popping a buy view controller; end its coordinator
+            // We're popping a users view controller; end its coordinator
             childDidFinish(usersViewController.usersViewModel?.coordinator)
         }
         
         if let repositoriesViewController = fromViewController as? RepositoriesViewController {
-            // We're popping a buy view controller; end its coordinator
+            // We're popping a repositories view controller; end its coordinator
             childDidFinish(repositoriesViewController.repositoriesViewModel?.coordinator)
         }
     }

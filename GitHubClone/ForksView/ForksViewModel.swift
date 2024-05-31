@@ -13,7 +13,7 @@ final class ForksViewModel {
     
     private(set) var forks = [Fork]()
     
-    private var perPage = 1
+    private var perPage = 10
     
     init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
@@ -42,7 +42,7 @@ final class ForksViewModel {
         }
     }
     
-    func checkForMainThread(completion: @escaping () -> Void) {
+    private func checkForMainThread(completion: @escaping () -> Void) {
         if Thread.isMainThread {
             completion()
         } else {

@@ -19,6 +19,7 @@ final class ForksViewModelTests: XCTestCase {
     
     override func tearDownWithError() throws {
         forksViewModel = nil
+        mockNetworkManager = nil
         super.tearDown()
     }
     

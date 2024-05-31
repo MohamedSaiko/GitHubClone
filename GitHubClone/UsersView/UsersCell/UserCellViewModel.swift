@@ -46,7 +46,7 @@ final class UserCellViewModel {
         }
     }
     
-    func checkForMainThread(completion: @escaping () -> Void) {
+    private func checkForMainThread(completion: @escaping () -> Void) {
         if Thread.isMainThread {
             completion()
         } else {

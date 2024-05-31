@@ -16,9 +16,10 @@ final class UsersViewModelTests: XCTestCase {
         mockNetworkManager = MockNetworkManager()
         usersViewModel = UsersViewModel(networkManager: mockNetworkManager)
     }
-
+    
     override func tearDownWithError() throws {
         usersViewModel = nil
+        mockNetworkManager = nil
         super.tearDown()
     }
     

@@ -22,6 +22,6 @@ final class AppURLs {
     }
     
     func createForksURL(fromusername name: String, FromRepository repository: String) -> String {
-            return "https://api.github.com/repos/\(name)/\(repository)/forks"
+        return "https://api.github.com/repos/\(name)/\(repository)/forks"
     }
 }

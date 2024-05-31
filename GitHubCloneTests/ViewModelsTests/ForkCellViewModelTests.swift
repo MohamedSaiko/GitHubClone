@@ -13,13 +13,10 @@ final class ForkCellViewModelTests: XCTestCase {
     var imageDownloader: MockImageDownloader!
     var imageCache: MockImageCache!
     
-    override func setUpWithError() throws {
-        let imageDownloader = MockImageDownloader()
-        forkCellViewModel = ForkCellViewModel(imageDownloader: imageDownloader, imageCache: NSCache<NSURL, NSData>())
-    }
-    
     override func tearDownWithError() throws {
         forkCellViewModel = nil
+        imageDownloader = nil
+        imageCache = nil
         super.tearDown()
     }
     

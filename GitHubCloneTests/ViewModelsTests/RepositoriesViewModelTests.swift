@@ -19,6 +19,7 @@ final class RepositoriesViewModelTests: XCTestCase {
     
     override func tearDownWithError() throws {
         repositoriesViewModel = nil
+        mockNetworkManager = nil
         super.tearDown()
     }
     

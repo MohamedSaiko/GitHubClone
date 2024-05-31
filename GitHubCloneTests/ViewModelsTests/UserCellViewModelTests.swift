@@ -13,9 +13,6 @@ final class UserCellViewModelTests: XCTestCase {
     var imageDownloader: MockImageDownloader!
     var imageCache: MockImageCache!
     
-    override func setUpWithError() throws {
-    }
-    
     override func tearDownWithError() throws {
         userCellViewModel = nil
         imageDownloader = nil

@@ -13,7 +13,7 @@ final class RepositoriesViewModel {
     
     private(set) var repositories = [Repository]()
     
-    private var perPage = 1
+    private var perPage = 10
     
     init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
