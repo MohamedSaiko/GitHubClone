@@ -14,7 +14,7 @@ final class UsersViewModel {
     private(set) var usersData = [UserData]()
     private(set) var users = [String : User]()
     
-    private var perPage = 1
+    private var perPage = 20
     
     init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
@@ -32,8 +32,10 @@ final class UsersViewModel {
             case .success(let userData):
                 self.usersData.append(contentsOf: userData)
                 self.getSingleUser {
-                    self.checkForMainThread {
-                        completion()
+                    if userData.count == self.users.count {
+                        self.checkForMainThread {
+                            completion()
+                        }
                     }
                 }
                 
