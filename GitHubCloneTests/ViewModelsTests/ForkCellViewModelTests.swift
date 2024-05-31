@@ -10,9 +10,11 @@ import XCTest
 
 final class ForkCellViewModelTests: XCTestCase {
     var forkCellViewModel: ForkCellViewModel!
+    var imageDownloader: MockImageDownloader!
+    var imageCache: MockImageCache!
     
     override func setUpWithError() throws {
-        let imageDownloader = ImageDownloader()
+        let imageDownloader = MockImageDownloader()
         forkCellViewModel = ForkCellViewModel(imageDownloader: imageDownloader, imageCache: NSCache<NSURL, NSData>())
     }
     
@@ -22,8 +24,21 @@ final class ForkCellViewModelTests: XCTestCase {
     }
     
     func testUserCellViewModelDownloadImage() {
+        let imageDownloader = MockImageDownloader()
+        forkCellViewModel = ForkCellViewModel(imageDownloader: imageDownloader, imageCache: NSCache<NSURL, NSData>())
+        
         forkCellViewModel.downloadImage(fromURL: URL(fileURLWithPath: "")) { data in
-            let image = UIImage(named: "GitHubLogoImage")
+            let image = UIImage(named: "GitHubLogoImageBlack")
+            XCTAssertEqual(data, image?.pngData())
+        }
+    }
+    
+    func testUserCellViewModelCacheImage() {
+        imageCache = MockImageCache()
+        forkCellViewModel = ForkCellViewModel(imageDownloader: imageCache, imageCache: NSCache<NSURL, NSData>())
+        
+        forkCellViewModel.downloadImage(fromURL: URL(fileURLWithPath: "")) { data in
+            let image = UIImage(named: "GitHubLogoImageBlack")
             XCTAssertEqual(data, image?.pngData())
         }
     }

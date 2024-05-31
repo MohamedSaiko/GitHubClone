@@ -13,6 +13,7 @@
 		DB1F0CA32C072BCB00ADF386 /* ForksViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA22C072BCB00ADF386 /* ForksViewCoordinator.swift */; };
 		DB1F0CA52C08154B00ADF386 /* ForkCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */; };
 		DB1F0CA72C0818ED00ADF386 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1F0CA62C0818ED00ADF386 /* Owner.swift */; };
+		DB5558C32C099C1100B89A9E /* MockImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5558C22C099C1100B89A9E /* MockImageCache.swift */; };
 		DBCBA23C2C04519200E31EEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23B2C04519200E31EEB /* AppDelegate.swift */; };
 		DBCBA23E2C04519200E31EEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */; };
 		DBCBA2402C04519200E31EEB /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCBA23F2C04519200E31EEB /* UsersViewController.swift */; };
@@ -75,6 +76,7 @@
 		DB1F0CA22C072BCB00ADF386 /* ForksViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForksViewCoordinator.swift; sourceTree = "<group>"; };
 		DB1F0CA42C08154B00ADF386 /* ForkCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForkCellViewModel.swift; sourceTree = "<group>"; };
 		DB1F0CA62C0818ED00ADF386 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		DB5558C22C099C1100B89A9E /* MockImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockImageCache.swift; sourceTree = "<group>"; };
 		DBCBA2382C04519200E31EEB /* GitHubClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCBA23B2C04519200E31EEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCBA23D2C04519200E31EEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			children = (
 				DBD537822C08D0EA00422450 /* MockNetworkManager.swift */,
 				DBEECE442C0919D9008A8F7D /* MockImageDownloader.swift */,
+				DB5558C22C099C1100B89A9E /* MockImageCache.swift */,
 				DBD5377E2C08D0A100422450 /* Users.json */,
 				DBD537802C08D0C100422450 /* Repositories.json */,
 				DBD5377C2C08D06200422450 /* Forks.json */,
@@ -491,6 +494,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5558C32C099C1100B89A9E /* MockImageCache.swift in Sources */,
 				DBD5378A2C08D1BE00422450 /* ForksViewModelTests.swift in Sources */,
 				DBD537882C08D19900422450 /* RepositoriesViewModelTests.swift in Sources */,
 				DBD537832C08D0EA00422450 /* MockNetworkManager.swift in Sources */,
