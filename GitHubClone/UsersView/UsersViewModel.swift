@@ -14,7 +14,7 @@ final class UsersViewModel {
     private(set) var usersData = [UserData]()
     private(set) var users = [String : User]()
     
-    private var perPage = 20
+    private var perPage = 1
     
     init(networkManager: AnyNetworkManager) {
         self.networkManager = networkManager
