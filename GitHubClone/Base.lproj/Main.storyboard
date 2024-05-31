@@ -38,7 +38,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hLH-V8-VPB">
-                                <rect key="frame" x="0.0" y="114" width="393" height="704"/>
+                                <rect key="frame" x="0.0" y="124" width="393" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="126" id="2eO-mj-xQy" customClass="UserCell" customModule="GitHubClone" customModuleProvider="target">
@@ -141,7 +141,7 @@
                         <constraints>
                             <constraint firstItem="Hpm-v0-YEz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IxW-tG-77l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hLH-V8-VPB" secondAttribute="bottom" id="JR0-S2-SLh"/>
-                            <constraint firstItem="hLH-V8-VPB" firstAttribute="top" secondItem="Hpm-v0-YEz" secondAttribute="bottom" constant="5" id="KvX-ah-D9g"/>
+                            <constraint firstItem="hLH-V8-VPB" firstAttribute="top" secondItem="Hpm-v0-YEz" secondAttribute="bottom" constant="15" id="KvX-ah-D9g"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLH-V8-VPB" secondAttribute="trailing" id="Nx5-9O-d8y"/>
                             <constraint firstItem="hLH-V8-VPB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vvt-4Y-dqV"/>
                             <constraint firstItem="Hpm-v0-YEz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nPz-Y3-DbW"/>
