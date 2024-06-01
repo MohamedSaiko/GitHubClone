@@ -15,8 +15,18 @@ Implementation:
 
 ![GitHubCloneScreens](https://github.com/MohamedSaiko/GitHubClone/assets/60336337/a994710a-05f5-4e14-a122-123deb1b099b)
 
+
 Recordings:
 
+
 https://github.com/MohamedSaiko/GitHubClone/assets/60336337/e19fe2e4-fb10-429f-a0fd-a8711587bbd4
+
+
+Error Handling With Alert:
+
+
+https://github.com/MohamedSaiko/GitHubClone/assets/60336337/55b5eb8e-02bc-4946-918b-350de75b79d3
+
+
 
 
